@@ -17,6 +17,7 @@ API SERVER
 kubectl is to interact with Kubenertes.
 Authentication, Authorization and Admision 
 
+(TODO: Kube config file - clearance)
 Authentication - User is authenticated with the headers passed - To validate if user who is trying to enter
 Authorized - using RBAC and Webhook to validate or mutate
 Save to etcd.
@@ -26,7 +27,8 @@ Save to etcd.
 |||
 
 SCHEDULER
-Try to find the best fit node based on taints/tolerated, nodeselector and pod specs with node
+Try to find the best fit node based on taints/tolerated, nodeselector and pod specs with node.
+TODO: (Taint - node and Toleration - pod)
 
 |||
 |||
@@ -48,5 +50,12 @@ Key-value store for ditributed systems API server writes to it in HA mode 3 etcd
 Kube proxy maintains network rules on nodes. These networks rules allow network communication to your pods from 
 network sessions inside or outside of your cluster.
 
-Every time a pod is created the ip tables is handled by kube-proxy.
+Every time a pod is created the ip tables is handled by kube-proxy. 
+
+Concept:
+Config - dbURL -> intenal network so latency is low 
+               -> secrets - environment variables 
+               -> Service - take deployment and make avialble to internal netowrk - opens up the port
+               -> Node port - everything is happening inside - helps to make able to external world and not while thing only the web app
+ 
 
