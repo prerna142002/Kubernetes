@@ -1,0 +1,52 @@
+Why Kubernetes?
+When we have multiple container then it becomes difficult to manage the containers because we have to manage 
+different services using scripts and replicate on Dev, Tests, Stage and Prod:
+1. Run at scale
+2. Monitor
+3. Up time
+4. DR setup
+5. Schduling
+6. Autoscaling
+7. Self Healing
+
+kubectl run nginx --image=nginx 
+
+Control Plane Node 
+
+API SERVER
+kubectl is to interact with Kubenertes.
+Authentication, Authorization and Admision 
+
+Authentication - User is authenticated with the headers passed - To validate if user who is trying to enter
+Authorized - using RBAC and Webhook to validate or mutate
+Save to etcd.
+
+|||
+|||
+|||
+
+SCHEDULER
+Try to find the best fit node based on taints/tolerated, nodeselector and pod specs with node
+
+|||
+|||
+|||
+
+CONTROLLER MANAGER
+Extensibility provider 
+Have watch loop keeps monitoring the object and if change occures then send back to the same expecetd state.
+
+|||
+|||
+|||
+
+ETCD
+Swapable 
+Key-value store for ditributed systems API server writes to it in HA mode 3 etcd nodes where 1 is leader RAFT algorithms (leader election) 2n+1.
+
+
+Kube proxy maintains network rules on nodes. These networks rules allow network communication to your pods from 
+network sessions inside or outside of your cluster.
+
+Every time a pod is created the ip tables is handled by kube-proxy.
+
