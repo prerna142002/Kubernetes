@@ -42,8 +42,10 @@ that to be point where they diverge
 DOT - Match index - Leader knows that it and the follower agree all the way up through the dot so here agree up through
 that 1st enrty and the leader knows to send the seond entry next that's actually what the message is about to do.
 
-
+Repairing replications
+(28 min) Continue...
 
 3. Safety
   a. Only a server with an up-to-date log can become leader.
+
 
