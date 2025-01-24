@@ -27,6 +27,12 @@ RAFT Overview:
   a. Select one of the servers to act as cluster leader.
   b. Detect crashes, chose new leeader.
 
+The 1st to timeout will ask for vote to elect itself as leader and vote itself also.
+Split Votes:
+In this case what happens is that 2 candidates have same timeout so when they ask for votes then they dont win usually becuase
+of incomplete votes so we wait for next timeout and then we wait and the timeout is randomized so it becomes easier.
+
+
 2. Log replication (normal operation)
   a. Leader takes commands from clients, appends them to its log.
   b. Leader replicated its log to other servers (overwriting inconsistencies)
