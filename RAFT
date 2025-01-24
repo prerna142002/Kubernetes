@@ -37,6 +37,13 @@ of incomplete votes so we wait for next timeout and then we wait and the timeout
   a. Leader takes commands from clients, appends them to its log.
   b. Leader replicated its log to other servers (overwriting inconsistencies)
 
+ARROW - Next index - Position in the log where the leader will send the next entry to that server and to make progress you want
+that to be point where they diverge
+DOT - Match index - Leader knows that it and the follower agree all the way up through the dot so here agree up through
+that 1st enrty and the leader knows to send the seond entry next that's actually what the message is about to do.
+
+
+
 3. Safety
   a. Only a server with an up-to-date log can become leader.
 
