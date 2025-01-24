@@ -1,0 +1,23 @@
+Consensus
+1. Agreement on shared state ( single system image)
+2. Reconvers from server failures autonomously.
+3. Key to building consistent storage systems.
+
+Inside a Consistent System
+1. TODO: eliminate single ppoint of failure.
+
+REPLICATE STATE MACHINE
+This is used to build Replicated State Machine build in large Systems
+
+PAXOS PROTOCOL
+The dirty little secret of the NSDI community is that most five people really, truly understand every part of Paxos.
+
+So, designed RAFT -
+We wanted the best algorithm for building real systems.
+1. Must be correct, complete and perform well
+2. Must also be understandable.
+
+What would be easier to understand or explain
+1. Fundamentally different decompisition than Paxos.
+2. less complexity in state space.
+3. Less mechanism.
