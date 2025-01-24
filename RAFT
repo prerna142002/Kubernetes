@@ -21,3 +21,16 @@ What would be easier to understand or explain
 1. Fundamentally different decompisition than Paxos.
 2. less complexity in state space.
 3. Less mechanism.
+
+RAFT Overview:
+1. Leader election -
+  a. Select one of the servers to act as cluster leader.
+  b. Detect crashes, chose new leeader.
+
+2. Log replication (normal operation)
+  a. Leader takes commands from clients, appends them to its log.
+  b. Leader replicated its log to other servers (overwriting inconsistencies)
+
+3. Safety
+  a. Only a server with an up-to-date log can become leader.
+
