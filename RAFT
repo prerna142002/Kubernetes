@@ -43,9 +43,13 @@ DOT - Match index - Leader knows that it and the follower agree all the way up t
 that 1st enrty and the leader knows to send the seond entry next that's actually what the message is about to do.
 
 Repairing replications
-(28 min) Continue...
 
 3. Safety
   a. Only a server with an up-to-date log can become leader.
+  b. Once the candidate stands for the leadership then we see that we even see the logs into the server and server
+      will not vote for the candiadate whose logs are not upto date.
+
+
+
 
 
