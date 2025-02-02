@@ -1,0 +1,11 @@
+Monolithic is always faster 
+and in Microservices we have an extra call for which we call between services.
+
+So, previously we used to have bare metals and due to which memory used to be wasted alot.
+-> Virtual Machine came into existance.
+   => we can have limited vitual machines 
+   => we divide the memory , OS also wastes memory, 
+
+
+
+
