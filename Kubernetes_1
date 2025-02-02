@@ -6,6 +6,20 @@ So, previously we used to have bare metals and due to which memory used to be wa
    => we can have limited vitual machines 
    => we divide the memory , OS also wastes memory, 
 
+Containers are easy to make and distribute
+
+Linux Namespace
+---------------
+Containers use this concept.
+
+pid1 -> Proces Id
+root filesystem -> Filesystem
+eth0 network interface -> Network
+Process inside container to share memory -> Interprocess communication
+own hostname -> Unix timesharing system
+own root user for container -> User
+ |
+map to different user on the host - Linux
 
 
 
