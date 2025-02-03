@@ -21,6 +21,9 @@ own root user for container -> User
  |
 map to different user on the host - Linux
 
+Ubuntu Playground 
+-----------------
+
 Container is like a process of Linux.
 command -
 1. docker run -d --name my-nginx-container --memory 521m --cpus 1 nginx
@@ -38,6 +41,30 @@ command -
    this will give details for containers
 
 
+
+Kubernetes Playground
+---------------------
+
+1. criclt ps 
+   this provides details of the containers 
+
+PAUSE
+-----
+there are some namespaces with name pause.
+Pause is a name of process in kubernetes associated with containers that is namespace holder, process management,
+signal faciliates and resources handling.
+This is present in every pod
+1st this runs and then other user defined containers run.
+
+
+PS: When OSI came they gave a specs and now we have different runtimes present:
+   Containerd, G-Visor, Docker
+   This will prevent strong integration between Docker and Kubernetes so anyone can keep theirs
+   By default we will not ship Docker.
+
+   Everyone maints their shims.
+
+   
 
 
 
