@@ -21,5 +21,17 @@ own root user for container -> User
  |
 map to different user on the host - Linux
 
+Container is like a process of Linux.
+command -
+1. docker run -d --name my-nginx-container --memory 521m --cpus 1 nginx
+   -d => in detachable mode
+
+2. ps aux | grep '[n]ginx' | sort -n -k 2 | head -n 1 | awk '{print $2}'
+   this will return the process id
+
+3. lsns -p <pid>
+   this will list namespaces 
+
+4. 
 
 
