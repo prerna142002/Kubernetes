@@ -32,6 +32,7 @@ command -
 3. lsns -p <pid>
    this will list namespaces 
 
-4. 
+4. cd /sys/fs/cgroup/memory/system.slice
+
 
 
