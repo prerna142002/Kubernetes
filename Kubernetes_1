@@ -32,7 +32,12 @@ command -
 3. lsns -p <pid>
    this will list namespaces 
 
-4. cd /sys/fs/cgroup/memory/system.slice
+4. cd /sys/fs/cgroup/memory/system.slice/docker
+
+5. cd /sys/fs/cgroup/memory/system.slice/docker-9fce392041a80371d6b4e462731526c5aa4f2539d96cebe240f7d95f31fe90db.scope
+   this will give details for containers
+
+
 
 
 
