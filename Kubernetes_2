@@ -1,0 +1,7 @@
+All containers are not full blown OS.
+(Distroless Containers )
+
+PIXIBOOTING   
+Kubernetes tooling => kubeadm, kops, ksctl, kubectl, kubelet
+
+Self managed Kubernetes - EKS, AKS, GKE, DKE
