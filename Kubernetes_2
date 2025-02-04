@@ -5,3 +5,12 @@ PIXIBOOTING
 Kubernetes tooling => kubeadm, kops, ksctl, kubectl, kubelet
 
 Self managed Kubernetes - EKS, AKS, GKE, DKE
+Authentication: Card is seen by guard
+Authorization:  Swipe the card to check have access to server room or not
+Admission:      Policy (Webhooks etc.) (like to enter to enter at 11 only)
+
+etcd - Store data in key-value pair store state of cluster
+
+
+
+
