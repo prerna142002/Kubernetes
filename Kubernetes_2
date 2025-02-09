@@ -11,6 +11,48 @@ Admission:      Policy (Webhooks etc.) (like to enter to enter at 11 only)
 
 etcd - Store data in key-value pair store state of cluster
 
+Commands:
+1. kubectl get nodes
+   Gives the details of the nodes
+2. kubectl get pods
+   Pods are your workloads
+3. kubectl config view
+   View the details of the kube configuration
+4. openssl genrsa -out prerna.key 2048
+   Create a key
+5. cat prerna.key | base64 | tr -d '\n'
+   Base Encode the key
+
+
+Whenever we make Kubernetes clusters (Self-managed or by kind).
+Kube config - YAML file
+contains details of:
+1. Cluster (which cluster to connect to)
+(CONTEXT - Define which user will talk to which cluster)
+2. Users  - List of users which is using what. 
+
+
+STEPS TO create user:
+1. openssl genrsa -out prerna.key 2048
+2. openssl req -new -key prerna.key -out saiyam.csr -subj "/CN=prerna/O=group1"
+   Now you see 2 files created prerna.csr and prerna.key
+3. cat prerna.csr | base64 | tr -d '\n'
+4. vi csr.yaml
+5. Add the following content from files
+    apiVersion: certificates.k8s.io/v1
+    kind: CertificateSigningRequest
+    metadata:
+      name: saiyam
+    spec:
+      request: ${Add here result from step 3}
+      signerName: kubernetes.io/kube-apiserver-client
+      usages:
+      - client auth
+6. kubectl apply -f csr.yaml
+   Now you see "certificatesigningrequest.certificates.k8s.io/prerna created"
+
+
+
 
 
 
