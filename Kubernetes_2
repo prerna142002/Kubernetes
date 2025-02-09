@@ -50,6 +50,16 @@ STEPS TO create user:
       - client auth
 6. kubectl apply -f csr.yaml
    Now you see "certificatesigningrequest.certificates.k8s.io/prerna created"
+7. kubectl certificate approve prerna
+8. kubectl get csr prerna -o jsonpath='{.status.certificate}' | base64 --decode > prerna.crt
+   Now you see prerna.crt file is created
+
+Setting up the config file
+1. kubectl config set-credentials prerna --client-certificate=prerna.crt --client-key=prena
+.key
+2. kubectl config get-contexts
+3. kubectl config set-context prerna-context --cluster=kubernetes --namespace=default --user=prerna
+4. kubectl config use-context prerna-context
 
 
 
